@@ -70,17 +70,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       signUp: async (email, password, fullName) => {
         if (!configured) return { error: 'Supabase is not connected yet. Add the project URL and anon key in .env.local.' };
         const supabase = getSupabase();
-        const { data, error } = await supabase.auth.signUp({ email, password });
+        // Do NOT insert into profiles here: email confirmation is on, so the
+        // user has no session yet and the RLS insert policy (id = auth.uid())
+        // rejects it. The handle_new_user() trigger (migration 0003) creates
+        // the profile row server-side from this metadata instead.
+        const { error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: { data: { full_name: fullName } },
+        });
         if (error) return { error: error.message };
-        if (data.user) {
-          const { error: profileError } = await supabase.from('profiles').insert({
-            id: data.user.id,
-            email,
-            full_name: fullName,
-            role: 'customer',
-          });
-          if (profileError) return { error: profileError.message };
-        }
         return {};
       },
       signOut: async () => {
