@@ -15,8 +15,6 @@ const ACCOUNT_FIELD: Record<PaymentMethodId, keyof PaymentAccounts> = {
   usdc: 'usdc_address',
   bnb: 'bnb_address',
   binance_pay: 'binance_pay_id',
-  bkash: 'bkash_number',
-  nagad: 'nagad_number',
 };
 
 const ACCOUNT_LABEL: Record<PaymentMethodId, string> = {
@@ -24,8 +22,6 @@ const ACCOUNT_LABEL: Record<PaymentMethodId, string> = {
   usdc: 'USDC address',
   bnb: 'BNB address',
   binance_pay: 'Binance Pay ID',
-  bkash: 'bKash number',
-  nagad: 'Nagad number',
 };
 
 function parsePaymentAccounts(raw: unknown): PaymentAccounts {
@@ -44,8 +40,6 @@ function parsePaymentAccounts(raw: unknown): PaymentAccounts {
       usdc_address: typeof v.usdc_address === 'string' ? v.usdc_address : '',
       bnb_address: typeof v.bnb_address === 'string' ? v.bnb_address : '',
       binance_pay_id: typeof v.binance_pay_id === 'string' ? v.binance_pay_id : '',
-      bkash_number: typeof v.bkash_number === 'string' ? v.bkash_number : '',
-      nagad_number: typeof v.nagad_number === 'string' ? v.nagad_number : '',
     };
   }
   return EMPTY_PAYMENT_ACCOUNTS;

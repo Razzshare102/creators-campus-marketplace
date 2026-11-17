@@ -171,7 +171,7 @@ const PLANS = [
 const SETTINGS = [
   {
     key: 'payment_accounts',
-    value: { usdt_address: '', usdc_address: '', bnb_address: '', binance_pay_id: '', bkash_number: '', nagad_number: '' },
+    value: { usdt_address: '', usdc_address: '', bnb_address: '', binance_pay_id: '' },
   },
   {
     key: 'site',

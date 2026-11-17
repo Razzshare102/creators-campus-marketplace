@@ -176,7 +176,7 @@ on conflict (product_id, name) do update set
 -- ---------------------------------------------------------------------------
 
 insert into public.settings (key, value) values
-  ('payment_accounts', '{"usdt_address": "", "usdc_address": "", "bnb_address": "", "binance_pay_id": "", "bkash_number": "", "nagad_number": ""}'::jsonb),
+  ('payment_accounts', '{"usdt_address": "", "usdc_address": "", "bnb_address": "", "binance_pay_id": ""}'::jsonb),
   ('site', '{"name": "Creators Campus", "tagline": "Your Digital Premium Marketplace", "currency": "USD"}'::jsonb)
 on conflict (key) do update set
   value = excluded.value,

@@ -125,9 +125,7 @@ the seed. Fill them in at **Admin → Settings** (or update the
   "usdt_address": "",
   "usdc_address": "",
   "bnb_address": "",
-  "binance_pay_id": "",
-  "bkash_number": "",
-  "nagad_number": ""
+  "binance_pay_id": ""
 }
 ```
 

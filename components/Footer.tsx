@@ -18,7 +18,7 @@ export default function Footer() {
           </div>
         </div>
         <p className="mt-2 small" style={{ marginBottom: 0 }}>
-          Payments accepted: USDT · USDC · BNB (BSC) · Binance Pay · bKash · Nagad.
+          Payments accepted: USDT · USDC · BNB (BSC) · Binance Pay.
           Every order is verified manually before delivery.
         </p>
         <p className="small" style={{ marginBottom: 0 }}>© 2026 Creators Campus. All rights reserved.</p>

@@ -4,7 +4,7 @@ A standalone Next.js marketplace for premium digital subscriptions, built to dep
 on Vercel with a Supabase backend.
 
 - **Storefront:** homepage, categories, search, product pages with plan selector,
-  cart, coupons, checkout (USDT / USDC / BNB / Binance Pay / bKash / Nagad),
+  cart, coupons, checkout (USDT / USDC / BNB / Binance Pay),
   payment proof submission (transaction ID + screenshot upload).
 - **Customers:** Supabase Auth (email), dashboard, order history + tracking,
   delivery details, support tickets, notifications.
@@ -53,7 +53,7 @@ fallback catalog in `lib/catalog.ts` (checkout and account features show a
 ## Payment receiving accounts
 
 Set them in Admin → Settings (USDT address, USDC address, BNB address,
-Binance Pay ID, bKash number, Nagad number). They ship **empty** — never
+Binance Pay ID). They ship **empty** — never
 invent wallet numbers. Orders cannot show payment details until the admin
 fills them in.
 

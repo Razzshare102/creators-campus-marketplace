@@ -54,8 +54,6 @@ export default function AdminSettingsPage() {
           usdc_address: typeof row.value.usdc_address === 'string' ? row.value.usdc_address : '',
           bnb_address: typeof row.value.bnb_address === 'string' ? row.value.bnb_address : '',
           binance_pay_id: typeof row.value.binance_pay_id === 'string' ? row.value.binance_pay_id : '',
-          bkash_number: typeof row.value.bkash_number === 'string' ? row.value.bkash_number : '',
-          nagad_number: typeof row.value.nagad_number === 'string' ? row.value.nagad_number : '',
         });
       }
     });
@@ -122,8 +120,6 @@ export default function AdminSettingsPage() {
         usdc_address: accounts.usdc_address.trim(),
         bnb_address: accounts.bnb_address.trim(),
         binance_pay_id: accounts.binance_pay_id.trim(),
-        bkash_number: accounts.bkash_number.trim(),
-        nagad_number: accounts.nagad_number.trim(),
       };
       await saveSetting('payment_accounts', value);
       await logActivity('settings_payment_accounts_update', {
@@ -233,28 +229,6 @@ export default function AdminSettingsPage() {
               className="input"
               value={accounts.binance_pay_id}
               onChange={(e) => setAccounts({ ...accounts, binance_pay_id: e.target.value })}
-              placeholder=""
-              autoComplete="off"
-            />
-          </div>
-          <div className="form-row">
-            <label className="label" htmlFor="acct-bkash">bKash number</label>
-            <input
-              id="acct-bkash"
-              className="input"
-              value={accounts.bkash_number}
-              onChange={(e) => setAccounts({ ...accounts, bkash_number: e.target.value })}
-              placeholder=""
-              autoComplete="off"
-            />
-          </div>
-          <div className="form-row">
-            <label className="label" htmlFor="acct-nagad">Nagad number</label>
-            <input
-              id="acct-nagad"
-              className="input"
-              value={accounts.nagad_number}
-              onChange={(e) => setAccounts({ ...accounts, nagad_number: e.target.value })}
               placeholder=""
               autoComplete="off"
             />

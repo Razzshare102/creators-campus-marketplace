@@ -9,7 +9,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Creators Campus — Your Digital Premium Marketplace',
   description:
-    'Buy X Premium, Telegram Premium, ChatGPT Plus, Claude Pro and more digital subscriptions. Pay with USDT, USDC, BNB, Binance Pay, bKash or Nagad.',
+    'Buy X Premium, Telegram Premium, ChatGPT Plus, Claude Pro and more digital subscriptions. Pay with USDT, USDC, BNB or Binance Pay.',
 };
 
 const THEME_INIT_SCRIPT = `try{var t=localStorage.getItem('cc-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}`;

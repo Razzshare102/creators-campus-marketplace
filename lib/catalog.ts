@@ -146,8 +146,6 @@ export const PAYMENT_METHODS: { id: PaymentMethodId; label: string; hint: string
   { id: 'usdc', label: 'USDC', hint: 'USD Coin (USDC)' },
   { id: 'bnb', label: 'BNB (BSC)', hint: 'BNB on BNB Smart Chain' },
   { id: 'binance_pay', label: 'Binance Pay', hint: 'Pay with Binance Pay ID' },
-  { id: 'bkash', label: 'bKash', hint: 'Send Money via bKash' },
-  { id: 'nagad', label: 'Nagad', hint: 'Send Money via Nagad' },
 ];
 
 export function paymentMethodLabel(id: string): string {

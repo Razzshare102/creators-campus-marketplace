@@ -80,7 +80,7 @@ export interface OrderItem {
   plan_name?: string;
 }
 
-export type PaymentMethodId = 'usdt' | 'usdc' | 'bnb' | 'binance_pay' | 'bkash' | 'nagad';
+export type PaymentMethodId = 'usdt' | 'usdc' | 'bnb' | 'binance_pay';
 
 export interface Payment {
   id: string;
@@ -192,8 +192,6 @@ export interface PaymentAccounts {
   usdc_address: string;
   bnb_address: string;
   binance_pay_id: string;
-  bkash_number: string;
-  nagad_number: string;
 }
 
 export const EMPTY_PAYMENT_ACCOUNTS: PaymentAccounts = {
@@ -201,6 +199,4 @@ export const EMPTY_PAYMENT_ACCOUNTS: PaymentAccounts = {
   usdc_address: '',
   bnb_address: '',
   binance_pay_id: '',
-  bkash_number: '',
-  nagad_number: '',
 };

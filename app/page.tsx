@@ -37,7 +37,7 @@ export default function HomePage() {
             <div className="step-num">2</div>
             <h3>Pay &amp; submit proof</h3>
             <p className="muted">
-              Pay with crypto, Binance Pay, bKash or Nagad, then submit your transaction ID and a payment screenshot.
+              Pay with crypto or Binance Pay, then submit your transaction ID and a payment screenshot.
             </p>
           </div>
           <div className="card">
